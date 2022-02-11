@@ -1,0 +1,6 @@
+@import "utils/_variables", "utils/_mixins", "utils/_maps";
+@import "base/_fonts", "base/_standards";
+@import "components/__btn.scss","components/_scrollbar";
+@import "layouts/_header", "layouts/_footer";
+@import "page/_presentation.scss", "page/_about", "page/_skills","page/_projects", "page/_contact";
+

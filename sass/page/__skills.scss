@@ -1,0 +1,217 @@
+.mySkills {
+    background: $light__yellow;
+    @include pages_marg;
+    @include mobile {
+        padding-top: 10px;
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 1%;
+        color: $violet;
+    }
+}
+.skills {
+    display: flex;
+    justify-content: center;
+    @include mobile {
+        display: block;
+    }
+    &__part1 {
+        width: 30%;
+        margin-right: 5%;
+        @include mobile {
+            margin-left: 5%;
+            width: auto;
+            margin-top: 5%;
+        }
+        @include tablet {
+            width: 40%;
+            margin-right: auto;
+        }
+        &__hard-skills {
+            background: $light__violet;
+            border-radius: 40px;
+            padding: 1%;
+            @include mobile {
+                padding-bottom: 5%;
+                padding-top: 5%;
+            }
+            @include tablet {
+                padding: 3%;
+                margin-left: 5%;
+            }
+            &__container {
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 1%;
+            }
+        }
+    }
+    &__part2 {
+        width: 50%;
+        @include mobile {
+            width: auto;
+        }
+        @include tablet {
+            width: 60%;
+        }
+        &__container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 115%;
+            @include mobile {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 40px;
+                width: auto;
+            }
+            @include tablet {
+                width: auto;
+            }
+        }
+        &__card {
+            margin: 2%;
+            height: 170px;
+            margin-top: auto;
+            padding: 1%;
+            background: $light__blue;
+            border: none;
+            margin-left: 1%!important;
+            @include mobile {
+                height: auto;
+                width: 90%!important;
+                margin-top: 3%!important;
+                margin-left: 1%!important;
+            }
+            @include tablet {
+                width: 25%!important;
+                margin-left: 5%!important;
+                height: auto;
+            }
+            i {
+                background: #c4a5e1;
+                padding: 5%;
+                @include mobile {
+                    padding: 5%!important;
+                }
+            }
+            span {
+                @include mobile {
+                    margin-top: auto!important;
+                }
+            }
+        }
+        &__container2 {
+            color: white;
+            font-weight: bold;
+            border-radius: 40px;
+            background: $light__violet;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            @include mobile {
+                width: auto;
+                margin-top: 20px;
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+            @include tablet {
+                margin-left: -50%;
+                margin-right: 10%;
+                margin-bottom: 15px;
+            }
+            p {
+                margin-left: 2%;
+                margin-right: 5%;
+                @include mobile {
+                    margin-left: 5%;
+                    font-size: 70%;
+                }
+            }
+        }
+    }
+}
+
+.skills__card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: bold;
+    margin: 1%;
+    margin-left: 10%;
+    border-radius: 25px;
+    width: 20%;
+    align-items: center;
+    i {
+        font-size: 35px;
+        padding: 10%;
+        background: $light__blue;
+        color: white;
+        border-radius: 180px;
+    }
+    span {
+        color: white;
+        margin-top: 5%;
+    }
+}
+
+.soft-skills {
+    border-radius: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+    background: $light__violet;
+    @include mobile {
+        margin-top: 30px;
+    }
+    @include tablet {
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+    h3 {
+        margin: inherit;
+        margin-top: 1%;
+        padding-top: 1%;
+        color: white;
+        @include mobile {
+            padding-bottom: 15px;
+            padding-top: 15px;
+        }
+        @include tablet {
+            margin-left: 5%;
+        }
+    }
+    &__container {
+        display: flex;
+        justify-content: space-around;
+        @include mobile {
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-bottom: 5%;
+        }
+    }
+    &__card {
+        text-align: center;
+        margin: 1%;
+        font-size: 10px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 10%;
+        padding: 1%;
+        background: $light__blue;
+        @include mobile {
+            width: 40%;
+        }
+        @include tablet {
+            width: 11%;
+        }
+        i {
+            font-size: 30px;
+            color: white;
+        }
+        span {
+            font-weight: bold;
+            color: white;
+        }
+    }
+}

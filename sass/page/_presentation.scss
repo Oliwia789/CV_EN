@@ -1,0 +1,94 @@
+.Presentation {
+    background: $beige;
+    h1 {
+        color: $light__blue;
+        margin: auto;
+        font-size: 55px
+    }
+    &__main {
+        @include between;
+        margin-left: 10%;
+        padding-bottom: 40px;
+        padding-top: 150px;
+        height: 800px;
+        @include mobile {
+            padding-top: 50px;
+            display: block;
+            height: auto;
+            text-align: center;
+            margin-left: auto;
+        }
+        @include tablet {
+            height: auto;
+        }
+        &__img {
+            width: 30%;
+            position: relative;
+            @include mobile {
+                width: 60%;
+                margin-left: 20%;
+                margin-top: 20px;
+            }
+            a {
+                @include mobile {
+                    display: none;
+                }
+            }
+            &__card {
+                height: 80%;
+                @include mobile {
+                    height: 400px;
+                }
+                img {
+                    @include img;
+                    border-left: solid white;
+                    background: $img_bg;
+                }
+            }
+        }
+        &__container {
+            width: 50%;
+            @include mobile {
+                width: auto;
+            }
+            .name {
+                font-family: $poppins;
+                font-weight: bold;
+                color: $violet;
+            }
+            &__text {
+                display: flex;
+                hr {
+                    height: 300px;
+                    margin-top: 40px;
+                    @include mobile {
+                        display: none;
+                    }
+                }
+                p {
+                    margin: 5%;
+                    line-height: 1.1;
+                    font-family: $mada;
+                }
+            }
+        }
+    }
+}
+#wave {
+    height: 550px;
+    width: 20%;
+    margin-left: -15%;
+    @include mobile {
+        display: none;
+    }
+    @include tablet {
+        display: none;
+    }
+}
+#curved {
+    position: absolute;
+    top: 25px;
+    transform: rotate(-50deg);
+    right: 90%;
+    color: black;
+}

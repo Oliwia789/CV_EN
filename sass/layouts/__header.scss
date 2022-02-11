@@ -1,0 +1,109 @@
+header{
+    position: fixed;
+    background: $violet__opacity;
+    z-index: 1;
+    width: 100%;
+    @include mobile {
+        position: inherit;
+        #navMobile {
+            display: none;
+            position: absolute;
+            right: 10px;
+            top: 80px;
+        }
+    }
+    .navbar {
+        @include between;
+        align-items: center;
+        margin-left: 3%;
+        margin-right: 5%;
+        &__home {
+            @include underline;
+        }
+        &__home::before {
+            @include b_underline(2px solid $white);
+        }
+        img {
+            height: 100px;
+        }
+        a {
+            color: $white;
+            font-family: $work;
+        }
+        li {
+            @include underline;
+        }
+        li:hover::before {
+            @include b_underline(2px solid $white);
+        }
+        nav {
+            display: contents;
+            @include mobile {
+                li:hover::before {
+                    content: none;
+                }
+            }
+        }
+}
+}
+#burgerMenu {
+    display: none;
+    @include mobile {
+        cursor: pointer;
+        width: 25%;
+        height: 50px;
+        position: relative;
+        display: block;
+        span, span:before, span:after {
+            background: white;
+            display: block;
+            height: 4px;
+            position: absolute;
+            transition: 0.3s ease-in-out;
+        }
+        span:before, span:after {
+            content: "";
+        }
+        span {
+            right: 25px;
+            top: 20px;
+            width: 27px;
+        }
+        span:before {
+            left: 0px;
+            top: -10px;
+            width: 27px;
+        }
+        span:after {
+            left: 0px;
+            top: 10px;
+            width: 27px;
+        }
+    }
+}
+
+@include mobile {
+    #burgerMenu.close span {
+        transform: rotate(-45deg);
+        top: 20px;
+        width: 27px;
+    }
+    #burgerMenu.close span:before {
+        top: 0px;
+        transform: rotate(90deg);
+        width: 27px;
+    }
+    #burgerMenu.close span:after {
+        top: 0px;
+        left:0;
+        transform: rotate(90deg);
+        opacity:0;
+        width:0;
+    }
+    .pad {
+        padding-bottom: 80px;
+    }
+    .dis {
+        display: block!important;
+    }
+}

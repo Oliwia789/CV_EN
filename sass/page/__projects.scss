@@ -1,0 +1,91 @@
+.myProjects {
+    padding-left: 5%;
+    background: $blue;
+    @include pages_marg;
+    @include mobile {
+        padding-top: 5px;
+        text-align: center;
+        padding-left: auto;
+    }
+    h2 {
+        margin-bottom: auto;
+        color: white;
+    }
+    &__container {
+        display: flex;
+        @include mobile {
+            margin-left: 5%;
+            margin-right: 5%;
+            display: block;
+        }
+    }
+    &__card {
+        text-align: center;
+        width: 100%;
+        margin-right: 7%;
+        @include mobile {
+            margin-bottom: 50px;
+        }
+        hr {
+            width: 75%;
+        }
+        h3 {
+            font-family: $work;
+            color: white;
+        }
+        p {
+            font-family: $mada;
+        }
+        &__img{
+            width: 100%;
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    &__card1 {
+        margin-top: 5%;
+    }
+    &__card2 {
+        margin-top: none;
+    }
+    &__card3 {
+        margin-top: -4%;
+    }
+    &__link {
+        display: flex;
+        justify-content: end;
+        font-size: 30px;
+        margin-top: -8%;
+        margin-right: 10%;
+        color: white;
+        @include mobile {
+            justify-content: center;
+            margin-top: 1%;
+        }
+        @include tablet {
+            margin-right: 5%;
+            font-size: 25px;
+        }
+        p {
+            font-family: $work;
+            margin: initial;
+        }
+        span {
+            margin-left: 40%;
+            font-size: 60px;
+            @include mobile {
+                margin-left: auto;
+            }
+        }
+    }
+}
+.myProjects__last_pic {
+    border-radius: 20px;
+}
+
+.myProjects__img_2 {
+    height: 40%;
+}

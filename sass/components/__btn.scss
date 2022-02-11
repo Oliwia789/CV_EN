@@ -1,0 +1,78 @@
+
+#btn__container {
+    margin-left: 20%;
+    @include mobile {
+      display: none;
+    }
+}
+button {
+  position: relative;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  font-size: inherit;
+  width: 16rem;
+  &.contactMeBtn{
+    .circle {
+      @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+      position: relative;
+      display: block;
+      width: 3rem;
+      height: 3rem;
+      background: $light__blue;
+      border-radius: 1.625rem;
+      .icon {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        &.arrow {
+          @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+          left: 0.625rem;
+          width: 1.125rem;
+          height: 0.125rem;
+          &::before {
+            position: absolute;
+            content: '';
+            top: -0.25rem;
+            right: 0.0625rem;
+            width: 0.625rem;
+            height: 0.625rem;
+            border-top: 0.125rem solid white;
+            border-right: 0.125rem solid white;
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+    .btn__text {
+      @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 0.75rem 0;
+      margin: 0 0 0 1.85rem;
+      color: $violet;
+      font-weight: 700;
+      font-family: $poppins;
+      text-transform: uppercase;
+    }
+  }
+  &:hover {
+    .circle {
+      width: 100%;
+      .icon {
+        &.arrow {
+          background: white;
+          transform: translate(1rem, 0);
+        }
+      }
+    }
+    .btn__text {
+      color: $white;
+    }
+  }
+}
+

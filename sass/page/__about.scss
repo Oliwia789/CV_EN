@@ -1,0 +1,136 @@
+.aboutMe {
+    @include pages_marg;
+    background: $light__green;
+    @include mobile {
+        padding-top: 30px;
+    }
+    h2 {
+        text-align: center;
+        color: $violet;
+        margin-bottom: auto;
+        margin-top: 4%;
+    }
+    &__main {
+        display: flex;
+        margin-left: 5%;
+        margin-right: 5%;
+        @include mobile {
+            display: block;
+            text-align: center;
+        }
+        h3 {
+            font-size: 20px;
+            color: white;
+            font-family: $work;
+        }
+        &__part1 {
+            width: 50%;
+            margin-right: 10%;
+            @include mobile {
+                width: auto;
+                margin-right: auto;
+            }
+            p {
+                text-align: justify;
+                font-family: $mada;
+                line-height: 1.1;
+            }
+            &__hobby {
+                @include tablet {
+                    width: 125%;
+                }
+                h3 {
+                    text-align: center;
+                }
+                &__container {
+                    display: flex;
+                }
+                &__card {
+                    background: $light__violet;
+                    padding: 1%;
+                    border-radius: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    font-weight: bold;
+                    margin-right: 1%;
+                    width: 25%;
+                    @include tablet {
+                        padding: 3%;
+                    }
+                    i {
+                        font-size: 20px;
+                        margin-bottom: 10px;
+                        padding: 20%;
+                        border-radius: 180px;
+                        background: $light__blue;
+                        color: white;
+                        margin-left: 20%;
+                        margin-right: 20%;
+                        @include mobile {
+                            font-size: inherit;
+                            margin-left: 5%;
+                            margin-right: 5%;
+                            margin-top: 5%;
+                        }
+                    }
+                    span {
+                        font-size: 80%;
+                        color: white;
+                        @include mobile {
+                            font-size: 60%;
+                        }
+                    }
+                }
+            }
+        }
+        &__part2 {
+            width: 50%;
+            @include mobile {
+                width: auto;
+            }
+            h3 {
+                text-align: center;
+            }
+            &__container {
+                display: flex;
+                hr {
+                    border-left: 2px solid white;
+                    margin: inherit;
+                    @include mobile {
+                        height: 600px;
+                    }
+                    @include tablet {
+                        height: 600px;
+                    }
+                }
+            }
+            &__card {
+                display: flex;
+                align-items: center;
+                span {
+                    font-weight: bold;
+                    margin-right: 3%;
+                    color: white;
+                }
+                strong {
+                    font-family: $work;
+                }
+            }
+        }
+    }
+}
+
+.noLast__card {
+    margin-bottom: 20px;
+}
+
+.aboutMe__tablet {
+    @include tablet {
+        width: 150%;
+        margin-top: 50px;
+    }
+}
+.upper_letter::first-letter {
+    font-size: 130%;
+}

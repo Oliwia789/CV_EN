@@ -1,0 +1,99 @@
+.contactMe {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    background: $beige;
+    @include mobile {
+        padding-top: 1px;
+        padding-left: inherit;
+        padding-right: inherit;
+    }
+    h2 {
+        font-size: 50px;
+        color: $light__blue;
+        margin-left: 5%;
+        @include mobile {
+            margin-left: auto;
+            text-align: center;
+            font-size: 45px;
+        }
+    }
+    &__container {
+        @include between;
+        margin-left: 5%;
+        margin-right: 5%;
+        @include mobile {
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        &__card {
+            width: 50%;
+        }
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        span {
+            margin: 5%;
+            font-size: 17px;
+            font-family: $work;
+            @include mobile {
+                margin: 3%;
+                font-size: auto;
+            }
+            a {
+                font-family: $work;
+                color: black;
+                display: flex;
+                @include mobile {
+                    display: flex;
+                }
+                i {
+                    margin-right: 10%;
+                }
+            }
+        }
+    }
+    &__dispo {
+        margin-left: 10%;
+        font-family: $work;
+        color: $violet;
+        width: 150%;
+        @include mobile {
+            margin-left: auto;
+            width: auto;
+            text-align: center;
+        }
+        h3 {
+            font-family: $work;
+        }
+    }
+    &__img {
+        margin-right: -50px;
+        height: 70%;
+        width: 30%;
+        @include mobile {
+            width: 50%;
+            margin-left: 25%;
+        }
+        img {
+            @include img;
+            background: $img_bg;
+        }
+    }
+
+}
+.wave_container {
+    width: 30%;
+    @include mobile {
+        display: none;
+    }
+}
+.wavy {
+    height: 300px;
+}
+.last-span {
+    margin-right: 10%;
+}
